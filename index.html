@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<audio src="ball.mp3" id="music1"></audio>
+<audio src="gameover.mp3" id="music2"></audio>
+<h2><strong>SCORE : </strong><strong id="diem"></strong> </h2>
+    <canvas  width="500" height="500" id="game"></canvas >
+<h1><strong>HƯỚNG DẪN : </strong>
+</h1>
+<h2>
+    Sử dụng 4 phím mũi tên : UP , DOWN , LEFT , RIGHT để điều khiển con rắn đến ăn mồi màu đỏ <br>
+    Nếu đầu rắn chạm vào đuôi là thua.
+</h2>
+</body>
+</html>
+<script>
+    let unit=25;
+    let snake=[];
+    let head_x=0;
+    let head_y=0;
+    let dx=0;
+    let dy=0;
+    let food_x=250;
+    let food_y=250;
+    let score=0;
+    let set;
+    let direct = 0;
+    let canv=document.getElementById('game');
+    let ctx=canv.getContext('2d');
+    let soundEat = document.getElementById('music1');
+    let soundOver = document.getElementById('music2')
+</script>
+<script src="snake.js"></script>
+<script src="food.js"></script>
+<script src="game.js"></script>
